@@ -49,10 +49,12 @@ address {
 
  .container {
     max-width: 320px;
-    padding-left: 16px;
+    /*padding-left: 16px;
     padding-right: 16px;
     margin-left:auto;
-    margin-right: auto;
+    margin-right: auto;*/
+    padding: 0 16px;
+    margin: 0 auto;
 }
 
 /** ===========HEADER========== */
@@ -81,7 +83,6 @@ address {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    /*margin-right: 76px;*/
     padding: 16px 0;
 }
 
@@ -96,8 +97,6 @@ address {
 }
 
 .header-menu-list {
-    /*display: flex;
-    gap: 40px;*/
     display: none;
 }
 
@@ -173,19 +172,27 @@ color: #404bbf;
 /** ===========HERO========== */
 
 .hero {
+    
+    box-sizing: content-box;
     max-width: 1440px;
-    background: #2e2f42;
+    background-color: #2e2f42;
     background-repeat: no-repeat;
     background-position: center;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-     url(../images/people-office-mob.jpg);
+     url(../images/hero/people-office-mob@1x.jpg);
     background-size: cover;
     padding-top: 72px;
     padding-bottom: 72px;
     margin: 0 auto;
-      
     }
-   
+
+  /*@media screen and (min-resotution: 192dpi)  {
+   .hero {
+          background-image: linear-gradient( rgba(46, 47, 66, 0.7), 
+               rgba(46, 47, 66, 0.7)),
+          url(../images/hero/people-office-mob@2x.jpg);
+    }
+  }*/
 .hero-title {
     /*max-width: 496px;
     font-weight: 700;
@@ -505,22 +512,23 @@ color: #404bbf;
 .footer-container {
     display: block;
     flex-wrap: wrap;
-    justify-content: center;
-    /*align-items: baseline;*/
-    }
+   }
 
-/*.container-one {
-    margin-right: 120px;
-}   */
+.container-one {
+    justify-content: flex-start;
+    width: 288px;
+}   
 
 .footer-logo {
-    display: inline-block;
+    display: block;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    color: #4d5ae5;
+    padding-left: 86px;
     margin-bottom: 16px;
 }
 
@@ -532,28 +540,21 @@ color: #404bbf;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #f4f4fd;
-    margin-bottom: 16px;
-    margin-right: 120px;
     }
 
 .footer-text {
-    max-width: 264px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
     padding-bottom: 72px;
-    
     }
 
 
 .footer-icons-list {
     display: flex;
-    /*align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;*/
-      margin: 0 auto;
-        
+    justify-content: center;
+    margin: 0 auto;
     gap: 16px;
     }
 
@@ -576,6 +577,7 @@ color: #404bbf;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 72px;
 }
 
 .footer-icons-item {
@@ -587,19 +589,18 @@ color: #404bbf;
     background-color: #31D0AA;
 }
 
-.footer-subscribe {
-    margin-left: 80px;
-}
-
 .footer-form {
     display: flex;
-    gap: 24px;
+flex-wrap: wrap;
+justify-content: center;
+    gap: 16px;
 }
 
 .footer-imput {
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    /*width: 264px;*/
+    width: 288px;
     height: 40px;
     font-size: 12px;
     line-height: 2;
@@ -637,8 +638,7 @@ color: #404bbf;
 
 .footer-email-icon {
     fill: #fff;
-    margin-left: 16px;
-}
+    }
 
     /** ========================= */
 
@@ -944,7 +944,7 @@ padding-top: 112px;
     row-gap: 64px;
     column-gap: 24px;
 }
-}
+
 
 .portfolio-box {
     max-width: 356px;
@@ -955,6 +955,43 @@ padding-top: 112px;
     row-gap: 72px;
 }
 
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 108px;
+    column-gap: 24px;
+    row-gap: 72px;
+    }
+.container-one {
+    max-width: 264px;
+}
+.footer-logo {
+    padding-left: 0;
+}
+.footer-text {
+    max-width: 264px;
+    padding-bottom: 0;
+
+}
+.footer-subtitle {
+   text-align: left;
+   }
+
+.footer-icons-link {
+    margin-bottom: 0;
+}
+
+.footer-subscribe {
+    
+}
+.footer-form {
+    justify-content: flex-start;
+    gap: 24px;
+}
+.footer-imput {
+    width: 264px;
+}
+}
 /** ============================ */
 
 /** ===========DESKTOP========== */
@@ -1045,4 +1082,22 @@ padding-top: 112px;
     max-width: 360px;
 }
 
+.footer-container {
+    display: flex;
+    flex-wrap: nowrap;  
+    gap: 0;
+   
+}
+
+.container-one {
+    margin-right: 120px;
+}
+.footer-subscribe {
+    margin-left: 80px;
+}
+
+}
 /** ===================== */
+
+
+
