@@ -139,12 +139,6 @@ color: #404bbf;
     display: none;
 }
 
-.header-address-list {
-   /* display: flex;
-    gap: 40px;*/
-}
-
-
 .header-address-link {
     font-weight: 400;
     font-size: 16px;
@@ -167,6 +161,101 @@ color: #404bbf;
     border: none;
 }
 
+.mob-menu {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100vw;
+    height: 100vh;
+    padding: 24px 24px 40px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: 0;
+    visibility: hidden;
+}
+    
+.close-menu-btn {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mob-menu-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
+
+.studio {
+    color: #404bbf;
+}
+
+.mob-menu-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;}
+
+.mob-menu-address-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #4d5ae5;
+}
+
+.devstudio {
+    color: #434455;
+}
+
+.mob-menu-icons-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mob-menu-icons-link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mob-menu-icons-item {
+    fill: #f4f4fd;
+}
+
+.mob-menu-icons-link:hover,
+.mob-menu-icons-link:focus {
+    background-color: #31D0AA;
+}
+
+
+
+
+
 /** ======================== */
 
 /** ===========HERO========== */
@@ -186,13 +275,13 @@ color: #404bbf;
     margin: 0 auto;
     }
 
-  /*@media screen and (min-resotution: 192dpi)  {
+  @media screen and (-webkit-min-device-pixel-ratio:2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
    .hero {
-          background-image: linear-gradient( rgba(46, 47, 66, 0.7), 
-               rgba(46, 47, 66, 0.7)),
+          background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
           url(../images/hero/people-office-mob@2x.jpg);
     }
-  }*/
+  }
+
 .hero-title {
     /*max-width: 496px;
     font-weight: 700;
@@ -916,10 +1005,20 @@ justify-content: center;
 
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-url(../images/people-office-tab.jpg);
-padding-top: 112px;
+            url(../images/hero/people-office-tab@1x.jpg);
+    padding-top: 112px;
     padding-bottom: 112px;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/people-office-tab@2x.jpg);
+    }
+}
+
 .hero-title {
     max-width: 496px;
     font-size: 56px;
@@ -981,9 +1080,7 @@ padding-top: 112px;
     margin-bottom: 0;
 }
 
-.footer-subscribe {
-    
-}
+
 .footer-form {
     justify-content: flex-start;
     gap: 24px;
@@ -1020,10 +1117,20 @@ padding-top: 112px;
 }
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
+        url(../images/hero/people-office-des@1x.jpg);
     padding-top: 188px;
     padding-bottom: 188px;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/people-office-des@2x.jpg);
+    }
+}
+
 .hero-title {
     padding-bottom: 48px;
 }
